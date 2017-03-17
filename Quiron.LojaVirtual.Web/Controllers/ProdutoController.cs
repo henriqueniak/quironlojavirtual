@@ -9,11 +9,11 @@ namespace Quiron.LojaVirtual.Web.Controllers
 {
     public class ProdutoController : Controller
     {
-        private PordutosRepositorios _repositorio;
+        private ProdutosRepositorios _repositorio;
         // GET: Produto
         public ActionResult Index()
         {
-            _repositorio = new PordutosRepositorios();
+            _repositorio = new ProdutosRepositorios();
             var produtos = _repositorio.Produtos.Take(10);
             return View(produtos);
         }

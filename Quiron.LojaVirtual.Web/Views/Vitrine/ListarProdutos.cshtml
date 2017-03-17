@@ -1,0 +1,12 @@
+﻿@using Quiron.LojaVirtual.Web.HtmlHelpers
+@model Quiron.LojaVirtual.Web.Models.ProdutosViewModel
+
+
+@foreach (var p in Model.Produtos)
+{
+    <h2>@p.Nome</h2>
+    @p.Descricao
+    <h2>@p.Preco</h2>
+}
+
+@Html.pageLink(Model.Paginacao, x => Url.Action("ListarProdutos", new { pagina = x }))
